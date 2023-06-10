@@ -1,16 +1,16 @@
 {
-    "short_name": "",
-    "name": "",
+    "short_name": "Spotifier",
+    "name": "Spotifier",
     "icons": [
       {
-        "src": "",
-        "sizes": "",
-        "type": ""
+        "src": "logo.png",
+        "sizes": "2000x2000",
+        "type": "image/png"
       }
     ],
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "",
-    "background_color": ""
+    "theme_color": "#1ED954",
+    "background_color": "#121212"
 }
   

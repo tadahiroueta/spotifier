@@ -1,0 +1,26 @@
+[
+  {
+    "name": "rock",
+    "color": "#f00"
+  },
+  {
+    "name": "pop",
+    "color": "#ff0"
+  },
+  {
+    "name": "folk",
+    "color": "#0f0"
+  },
+  {
+    "name": "jazz",
+    "color": "#00f"
+  },
+  {
+    "name": "rap",
+    "color": "#0ff"
+  },
+  {
+    "name": "soul",
+    "color": "#f0f"
+  }
+]

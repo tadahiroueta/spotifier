@@ -3,6 +3,7 @@ import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import Spotify from "../Spotify"
 
+const redirectURI = "https://spotifier.tadahiroueta.com/search"
 const PLAYLIST_PLACEHOLDER = { name: "", cover: "playlist-placeholder.png", link: "" }
 
 export default function Search() {
@@ -10,7 +11,7 @@ export default function Search() {
   const [ searchResults, setSearchResults ] = useState([]);
   const [ playlist, setPlaylist ] = useState(PLAYLIST_PLACEHOLDER);
 
-  useEffect(() => { Spotify.getAccessToken() }, [])
+  useEffect(() => { Spotify.getAccessToken(redirectURI) }, [])
 
   /**
    * Tries to find the cover of a playlist that includes the song
@@ -20,7 +21,7 @@ export default function Search() {
    * @returns {string} href of playlist cover image
    */
   const searchPlaylist = async (songName) => { 
-    for (const playlist of await Spotify.getPlaylists()) if (playlist.songs.find(song => songName === song)) {
+    for (const playlist of await Spotify.getPlaylists(redirectURI)) if (playlist.songs.find(song => songName === song)) {
       setPlaylist(playlist)
       return
     }
@@ -29,7 +30,7 @@ export default function Search() {
 
   const search = async term => {
     // search for song
-    const results = await Spotify.searchSong(term)
+    const results = await Spotify.searchSong(term, redirectURI)
 
     if (results.length === 0) return search(term)
 
@@ -46,7 +47,7 @@ export default function Search() {
   return (
     <div className={ 'min-h-screen w-full bg-background ' + (searchTerm ? "!bg-active-background" : null) }>
 
-      <div className="mt-48 w-full flex flex-col md:flex-row-reverse items-center md:items-start md:justify-center">
+      <div className="md:mt-48 w-full flex flex-col md:flex-row-reverse items-center md:items-start md:justify-center">
 
         <div className='w-full md:w-1/3 flex flex-col items-center'>
 

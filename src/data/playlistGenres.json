@@ -1,0 +1,206 @@
+[
+  {
+    "name": "disco pop",
+    "genres": [ "pop", "soul" ]
+  },
+  {
+    "name": "romantic folk",
+    "genres": [ "pop", "folk" ]
+  },
+  {
+    "name": "indie rock",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "surf rock",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "hip hop",
+    "genres": [ "pop", "rap" ]
+  },
+  {
+    "name": "city pop",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "pop punk",
+    "genres": [ "pop", "rock" ]
+  },
+  {
+    "name": "new wave",
+    "genres": [ "pop", "rock" ]
+  },
+  {
+    "name": "future funk",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "lo fi rap",
+    "genres": [ "pop", "rap" ]
+  },
+  {
+    "name": "grunge",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "comedy",
+    "genres": [ "rock", "pop", "rap" ]
+  },
+  {
+    "name": "dance pop",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "funk rock",
+    "genres": [ "rock", "soul" ]
+  },
+  {
+    "name": "garage rock",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "glam",
+    "genres": [ "rock" ]
+  },
+  {
+    "name": "mpb",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "britpop",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "piano rock",
+    "genres": [ "rock" ]
+  },
+  {
+    "name": "vocal jazz",
+    "genres": [ "jazz" ]
+  },
+  {
+    "name": "soul jazz",
+    "genres": [ "jazz", "soul" ]
+  },
+  {
+    "name": "anime",
+    "genres": [ "rock", "pop", "rap" ]
+  },
+  {
+    "name": "synth pop",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "folk pop",
+    "genres": [ "pop", "folk" ]
+  },
+  {
+    "name": "folk rock",
+    "genres": [ "rock", "folk" ]
+  },
+  {
+    "name": "anti folk",
+    "genres": [ "pop", "folk" ]
+  },
+  {
+    "name": "heavy metal",
+    "genres": [ "rock" ]
+  },
+  {
+    "name": "prog rock",
+    "genres": [ "rock" ]
+  },
+  {
+    "name": "k pop",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "hard rock",
+    "genres": [ "rock" ]
+  },
+  {
+    "name": "traditional pop",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "indie soul",
+    "genres": [ "pop", "soul" ]
+  },
+  {
+    "name": "reggae",
+    "genres": [ "jazz" ]
+  },
+  {
+    "name": "lo fi agitado",
+    "genres": [ "pop", "rap" ]
+  },
+  {
+    "name": "disco",
+    "genres": [ "soul" ]
+  },
+  {
+    "name": "bedroom pop",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "blues folk",
+    "genres": [ "folk" ]
+  },
+  {
+    "name": "avant",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "blues punk",
+    "genres": [ "rock" ]
+  },
+  {
+    "name": "indie blues",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "show tunes",
+    "genres": [ "pop", "folk" ]
+  },
+  {
+    "name": "soundtrack",
+    "genres": [ "jazz" ]
+  },
+  {
+    "name": "comtemporary folk",
+    "genres": [ "folk" ]
+  },
+  {
+    "name": "blues indie rock",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "pop rock",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "vocal lo fi",
+    "genres": [ "pop", "rap" ]
+  },
+  {
+    "name": "dance punk",
+    "genres": [ "rock", "pop" ]
+  },
+  {
+    "name": "funk",
+    "genres": [ "soul" ]
+  },
+  {
+    "name": "punk",
+    "genres": [ "rock" ]
+  },
+  {
+    "name": "dreampop",
+    "genres": [ "pop" ]
+  },
+  {
+    "name": "classic rock",
+    "genres": [ "rock" ]
+  }
+]

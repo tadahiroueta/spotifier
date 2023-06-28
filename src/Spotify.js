@@ -1,5 +1,4 @@
 const CLIENT_ID = '67db8132185547449c087e4ca5033883'
-const REDIRECT_URI = "http://localhost:3000/search" // change when deploying
 
 let accessToken, playlists
 
@@ -12,7 +11,7 @@ const Spotify = {
      * 
      * @returns {string} access token
      */
-    getAccessToken() {
+    getAccessToken(redirectURI) {
         if (accessToken) return accessToken
         
         const href = window.location.href
@@ -30,7 +29,7 @@ const Spotify = {
             return accessToken;
         } 
         else {
-            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=token&scope=playlist-modify-public&redirect_uri=${REDIRECT_URI}`;
+            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${ CLIENT_ID }&response_type=token&scope=playlist-modify-public&redirect_uri=${ redirectURI }`;
             window.location = accessUrl;
     }},
 
@@ -39,10 +38,10 @@ const Spotify = {
      * 
      * @returns {Promise<Array>} array of playlist ids
      */
-    async getPlaylists() {
+    async getPlaylists(redirectURI) {
         if (playlists) return playlists
 
-        const accessToken = Spotify.getAccessToken();
+        const accessToken = Spotify.getAccessToken(redirectURI);
         playlists = await fetch('https://api.spotify.com/v1/me/playlists?limit=50', { headers: { Authorization: `Bearer ${accessToken}`}})
             .then(response => response.json())
 
@@ -64,15 +63,15 @@ const Spotify = {
      * @param {string} playlistId
      * @returns {Promise<Array>} names of songs in the playlist
      */
-    getSongs(playlistId) {
-        const accessToken = Spotify.getAccessToken();
+    getSongs(playlistId, redirectURI) {
+        const accessToken = Spotify.getAccessToken(redirectURI);
         return fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, { headers: { Authorization: `Bearer ${accessToken}`}})
             .then(response => response.json())
             .then(jsonResponse => jsonResponse.items.map(item => item.track.name))
     },
 
-    searchSong(term) {
-        const accessToken = Spotify.getAccessToken();
+    searchSong(term, redirectURI) {
+        const accessToken = Spotify.getAccessToken(redirectURI);
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, { headers: { Authorization: `Bearer ${accessToken}` }})
 
             .then(response => response.json())

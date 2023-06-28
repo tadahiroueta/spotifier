@@ -42,7 +42,7 @@ const Spotify = {
         if (playlists) return playlists
 
         const accessToken = Spotify.getAccessToken(redirectURI);
-        playlists = await fetch('https://api.spotify.com/v1/me/playlists?limit=50', { headers: { Authorization: `Bearer ${accessToken}`}})
+        playlists = await fetch('https://api.spotify.com/v1/me/playlists?limit=100', { headers: { Authorization: `Bearer ${accessToken}`}})
             .then(response => response.json())
 
         playlists = await Promise.all(playlists.items.map(async item => {
@@ -55,6 +55,23 @@ const Spotify = {
                 link: item.external_urls.spotify
         }}))
         return playlists
+    },
+
+    /**
+     * Fetches all playlists made by dev
+     * 
+     * @returns {Promise<Array>} array of playlist ids
+     */
+    async getDevPlaylists(redirectURI) {
+        if (playlists) return playlists
+
+        const accessToken = Spotify.getAccessToken(redirectURI);
+        playlists = await fetch('https://api.spotify.com/v1/users/hirueta/playlists?limit=100', { headers: { Authorization: `Bearer ${accessToken}`}})
+            .then(response => response.json())
+
+        return await Promise.all(playlists.items.map(({ name, images, external_urls }) => {
+            return { name, cover: images[0].url, link: external_urls.spotify }
+        }))
     },
 
     /**

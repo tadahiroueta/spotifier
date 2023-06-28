@@ -15,7 +15,7 @@ export default function Library() {
   // useEffect(() => { Spotify.getAccessToken(redirectURI) }, [])
 
   useEffect(() => { 
-    Spotify.getPlaylists(redirectURI)
+    Spotify.getDevPlaylists(redirectURI)
       .then(setPlaylists)
       .catch(() => {})
   }, [])

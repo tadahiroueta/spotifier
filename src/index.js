@@ -9,13 +9,11 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='' element={<Redirect />} />
-        <Route path='search' element={<Search />} />
-        <Route path='library' element={<Library />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path='' element={<Redirect />} />
+      <Route path='search' element={<Search />} />
+      <Route path='library' element={<Library />} />
+    </Routes>
+  </BrowserRouter>
 );

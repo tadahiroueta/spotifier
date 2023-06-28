@@ -6,14 +6,12 @@ import genres from "../data/genres.json"
 import playlistGenres from "../data/playlistGenres.json"
 import NavBottom from "./NavBottom"
 
-const redirectURI = "http://192.168.1.52:3000/library"
+const redirectURI = "https://spotifier.tadahiroueta.com/library"
 
 export default function Library() {
   const [ filters, setFilters ] = useState([])
   const [ filtered, setFiltered ] = useState([])
   const [ playlists, setPlaylists ] = useState([])
-
-  // useEffect(() => { Spotify.getAccessToken(redirectURI) }, [])
 
   useEffect(() => { 
     Spotify.getDevPlaylists(redirectURI)

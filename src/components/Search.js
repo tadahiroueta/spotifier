@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Spotify from "../Spotify"
 import NavBottom from './NavBottom';
 
-const redirectURI = "http://192.168.1.52:3000/search"
+const redirectURI = "https://spotifier.tadahiroueta.com/search"
 const PLAYLIST_PLACEHOLDER = { name: "", cover: "playlist-placeholder.png", link: "" }
 
 export default function Search() {

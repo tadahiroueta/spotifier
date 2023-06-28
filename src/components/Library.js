@@ -4,8 +4,9 @@ import Spotify from "../Spotify"
 
 import genres from "../data/genres.json"
 import playlistGenres from "../data/playlistGenres.json"
+import NavBottom from "./NavBottom"
 
-const redirectURI = "https://spotifier.tadahiroueta.com/library"
+const redirectURI = "http://192.168.1.52:3000/library"
 
 export default function Library() {
   const [ filters, setFilters ] = useState([])
@@ -44,7 +45,7 @@ export default function Library() {
   }, [ filters, playlists ])
 
   return (
-    <div className="min-h-screen w-full bg-background flex flex-col items-center">
+    <div className="min-h-screen w-full bg-background flex flex-col items-center space-y-4">
 
       <div className="mt-16 md:mt-24 w-2/3 md:w-5/12 text-white space-y-4 md:space-y-16">
       
@@ -58,7 +59,7 @@ export default function Library() {
           </div>
         ) : <div className="text-2xl md:text-4xl font-semibold">Dev's Library</div> }
 
-        <div className="max-h-[70vh] md:max-h-[55vh] overflow-y-scroll grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-16 no-scrollbar">
+        <div className="min-h-[70vh] md:min-h-[55vh] max-h-[70vh] md:max-h-[55vh] overflow-y-scroll grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-16 no-scrollbar">
 
           { filters.length >= 2 ? null : genres.map(genre => (
             <div onClick={ () => setFilters([ ...filters, genre ])} key={ genre.name } className="space-y-1">
@@ -79,6 +80,8 @@ export default function Library() {
         </div>
       
       </div>
+
+      <NavBottom />
     
     </div>
 )}

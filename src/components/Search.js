@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import Spotify from "../Spotify"
+import NavBottom from './NavBottom';
 
-const redirectURI = "https://spotifier.tadahiroueta.com/search"
+const redirectURI = "http://192.168.1.52:3000/search"
 const PLAYLIST_PLACEHOLDER = { name: "", cover: "playlist-placeholder.png", link: "" }
 
 export default function Search() {
@@ -45,9 +46,9 @@ export default function Search() {
   }
 
   return (
-    <div className={ 'min-h-screen w-full bg-background ' + (searchTerm ? "!bg-active-background" : null) }>
+    <div className={ 'min-h-screen w-full bg-background flex flex-col items-center ' + (searchTerm ? "!bg-active-background" : null) }>
 
-      <div className="md:mt-48 w-full flex flex-col md:flex-row-reverse items-center md:items-start md:justify-center">
+      <div className="mb-36 md:mt-48 w-full flex flex-col md:flex-row-reverse items-center md:items-start md:justify-center">
 
         <div className='w-full md:w-1/3 flex flex-col items-center'>
 
@@ -98,6 +99,8 @@ export default function Search() {
         </a>
 
       </div>
+
+      <NavBottom />
 
     </div>
 )}

@@ -38,7 +38,9 @@ export default function Library() {
   useEffect(() => {
     if (!playlists.length) return
     const names = getFilteredPlaylistGenres().map(playlist => playlist.name)
-    setFiltered(playlists.filter(playlist => names.includes(playlist.name)))
+    const filtered = playlists.filter(playlist => names.includes(playlist.name))
+    filtered.sort(() => Math.random() - 0.5)
+    setFiltered(filtered)
   // eslint-disable-next-line
   }, [ filters, playlists ])
 

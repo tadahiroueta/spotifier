@@ -70,6 +70,8 @@ const Spotify = {
             .then(response => response.json())
 
         return await Promise.all(playlists.items.map(({ name, images, external_urls }) => {
+            if (!images[0]) return { name, link: external_urls.spotify } // no cover
+            
             return { name, cover: images[0].url, link: external_urls.spotify }
         }))
     },

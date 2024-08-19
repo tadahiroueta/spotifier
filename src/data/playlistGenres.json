@@ -202,5 +202,9 @@
   {
     "name": "classic rock",
     "genres": [ "rock" ]
+  },
+  {
+    "name": "vocal r&b",
+    "genres": [ "soul" ]
   }
 ]

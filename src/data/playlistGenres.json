@@ -206,5 +206,13 @@
   {
     "name": "vocal r&b",
     "genres": [ "soul" ]
+  },
+  {
+    "name": "bossa nova",
+    "genres": [ "jazz", "folk" ]
+  },
+  {
+    "name": "yatch rock",
+    "genres": [ "rock" ]
   }
 ]
